@@ -38,10 +38,10 @@ plot(data_sub$Time_new,
      type = "l",
      xlab = "datetime",
      ylab = "Voltage",
-     yaxs = "i")
+     yaxt = "n")
 axis(side = 2, 
-     at = c(234, 238, 242, 246), 
-     labels = c(234, 238, 242, 246))
+     at = c(234, 236, 238, 240, 242, 244, 246), 
+     labels = c(234, "", 238, "", 242, "", 246))
 
 
 # plot 4.3
@@ -55,7 +55,8 @@ legend("topright",
        col = c("black", "blue", "red"),
        legend = c("Sub_metering_1",
                   "Sub_metering_2",
-                  "Sub_metering_3"))
+                  "Sub_metering_3"), 
+       bty = "n")
 
 # plot 4.4
 with(data_sub,
